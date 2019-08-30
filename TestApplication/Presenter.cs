@@ -38,11 +38,11 @@ namespace TestApplication
             string result;
             switch (sw)
             {
-                case 1: result = "Element is include in array";
+                case 1: result = "Item is listed";
                     break;
                 case 0: result = "Array is empty";
                     break;
-                case -1: result = "Element is not include in array";
+                case -1: result = "Item isn't listed";
                     break;
                 default: result = "";
                     break;

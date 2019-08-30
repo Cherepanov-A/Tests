@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabSeq = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.seqBtn = new System.Windows.Forms.Button();
             this.seqTboxRes = new System.Windows.Forms.TextBox();
             this.seqTboxSrc = new System.Windows.Forms.TextBox();
@@ -52,7 +53,8 @@
             this.tBoxOut = new System.Windows.Forms.TextBox();
             this.tBoxIn = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabSeq.SuspendLayout();
             this.tabFact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.factNumUd)).BeginInit();
@@ -75,9 +77,19 @@
             this.tabSeq.Text = "Sequence";
             this.tabSeq.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(158, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Enter the sequence";
+            // 
             // seqBtn
             // 
-            this.seqBtn.Location = new System.Drawing.Point(193, 181);
+            this.seqBtn.Location = new System.Drawing.Point(187, 181);
             this.seqBtn.Name = "seqBtn";
             this.seqBtn.Size = new System.Drawing.Size(75, 23);
             this.seqBtn.TabIndex = 2;
@@ -87,7 +99,7 @@
             // 
             // seqTboxRes
             // 
-            this.seqTboxRes.Location = new System.Drawing.Point(137, 142);
+            this.seqTboxRes.Location = new System.Drawing.Point(133, 142);
             this.seqTboxRes.Name = "seqTboxRes";
             this.seqTboxRes.Size = new System.Drawing.Size(183, 20);
             this.seqTboxRes.TabIndex = 1;
@@ -116,18 +128,18 @@
             // 
             this.factLbl.AutoSize = true;
             this.factLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.factLbl.Location = new System.Drawing.Point(177, 65);
+            this.factLbl.Location = new System.Drawing.Point(165, 65);
             this.factLbl.Name = "factLbl";
-            this.factLbl.Size = new System.Drawing.Size(94, 17);
+            this.factLbl.Size = new System.Drawing.Size(118, 17);
             this.factLbl.TabIndex = 3;
-            this.factLbl.Text = "Enter number";
+            this.factLbl.Text = "Enter the number";
             // 
             // factLblRes
             // 
             this.factLblRes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.factLblRes.AutoSize = true;
             this.factLblRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.factLblRes.Location = new System.Drawing.Point(200, 167);
+            this.factLblRes.Location = new System.Drawing.Point(199, 167);
             this.factLblRes.MinimumSize = new System.Drawing.Size(50, 0);
             this.factLblRes.Name = "factLblRes";
             this.factLblRes.Size = new System.Drawing.Size(50, 17);
@@ -155,6 +167,8 @@
             // 
             // tabStrSrch
             // 
+            this.tabStrSrch.Controls.Add(this.label3);
+            this.tabStrSrch.Controls.Add(this.label2);
             this.tabStrSrch.Controls.Add(this.strBtn);
             this.tabStrSrch.Controls.Add(this.strTboxRes);
             this.tabStrSrch.Controls.Add(this.strTboxSource);
@@ -168,7 +182,7 @@
             // strBtn
             // 
             this.strBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.strBtn.Location = new System.Drawing.Point(180, 260);
+            this.strBtn.Location = new System.Drawing.Point(179, 260);
             this.strBtn.Name = "strBtn";
             this.strBtn.Size = new System.Drawing.Size(75, 23);
             this.strBtn.TabIndex = 2;
@@ -179,7 +193,7 @@
             // strTboxRes
             // 
             this.strTboxRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.strTboxRes.Location = new System.Drawing.Point(33, 136);
+            this.strTboxRes.Location = new System.Drawing.Point(27, 155);
             this.strTboxRes.Multiline = true;
             this.strTboxRes.Name = "strTboxRes";
             this.strTboxRes.Size = new System.Drawing.Size(383, 99);
@@ -188,7 +202,7 @@
             // strTboxSource
             // 
             this.strTboxSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.strTboxSource.Location = new System.Drawing.Point(33, 21);
+            this.strTboxSource.Location = new System.Drawing.Point(27, 33);
             this.strTboxSource.Multiline = true;
             this.strTboxSource.Name = "strTboxSource";
             this.strTboxSource.Size = new System.Drawing.Size(383, 93);
@@ -324,15 +338,25 @@
             this.tabControl1.Size = new System.Drawing.Size(456, 330);
             this.tabControl1.TabIndex = 1;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(172, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Enter sequence";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(24, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Source string";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(24, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Uniqe items";
             // 
             // Form1
             // 
@@ -384,6 +408,8 @@
         private System.Windows.Forms.TextBox seqTboxRes;
         private System.Windows.Forms.TextBox seqTboxSrc;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
 
 
     }
