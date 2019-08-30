@@ -11,10 +11,9 @@ namespace TestApplication
         internal static int FactCount(int n)
         {
             int fact = 1;
-            while (n>1)
+            for (int i = 1; i <= n; i++)
             {
-                fact *= n;
-                n--;
+                fact *= i;
             }
             return fact;
         }
