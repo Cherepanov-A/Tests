@@ -60,16 +60,20 @@ namespace TestApplication
             {
                 return "This is not array";
             }
-            int[] unsortArr = new int[temp.Length];
+            List<int> unsortArr = new List<int>();
             for (int i = 0; i < temp.Length; i++)
             {
-                unsortArr[i] = Convert.ToInt32(temp[i]);
+                if (temp[i] != "")
+                {
+                    unsortArr.Add(Convert.ToInt32(temp[i]));
+                }
+                
             }
             bool done = true;
             while (done)
             {
                 done = false;
-                for (int i = 1; i < unsortArr.Length; i++)
+                for (int i = 1; i < unsortArr.Count; i++)
                 {
 
                     if (unsortArr[i] < unsortArr[i - 1])
@@ -81,7 +85,11 @@ namespace TestApplication
                     }
                 }
             }
-            sortArr = unsortArr;
+            sortArr = new int[unsortArr.Count];
+            for (int i = 0; i < sortArr.Length; i++)
+            {
+                sortArr[i] = unsortArr[i];
+            }
             StringBuilder result = new StringBuilder();
             foreach (var item in unsortArr)
             {
