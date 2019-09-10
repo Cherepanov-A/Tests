@@ -39,6 +39,8 @@
             this.factBtn = new System.Windows.Forms.Button();
             this.factNumUd = new System.Windows.Forms.NumericUpDown();
             this.tabStrSrch = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.strBtn = new System.Windows.Forms.Button();
             this.strTboxRes = new System.Windows.Forms.TextBox();
             this.strTboxSource = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@
             this.tBoxOut = new System.Windows.Forms.TextBox();
             this.tBoxIn = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabSeq.SuspendLayout();
             this.tabFact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.factNumUd)).BeginInit();
@@ -179,6 +179,26 @@
             this.tabStrSrch.Text = "String Search";
             this.tabStrSrch.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(24, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Uniqe items";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(24, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Source string";
+            // 
             // strBtn
             // 
             this.strBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -188,7 +208,7 @@
             this.strBtn.TabIndex = 2;
             this.strBtn.Text = "Search";
             this.strBtn.UseVisualStyleBackColor = true;
-            this.strBtn.Click += new System.EventHandler(this.button1_Click);
+            this.strBtn.Click += new System.EventHandler(this.strBtn_Click);
             // 
             // strTboxRes
             // 
@@ -338,26 +358,6 @@
             this.tabControl1.Size = new System.Drawing.Size(456, 330);
             this.tabControl1.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(24, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Source string";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(24, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Uniqe items";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,30 +388,28 @@
         private System.Windows.Forms.TabPage tabStrSrch;
         private System.Windows.Forms.TabPage tabSort;
         private System.Windows.Forms.Button srcBtn;
-        private System.Windows.Forms.Label srcResLbl;
         private System.Windows.Forms.Label srcLbl;
-        private System.Windows.Forms.NumericUpDown srcNumUd;
         private System.Windows.Forms.Label sortLbl2;
         private System.Windows.Forms.Label sortLbl1;
         private System.Windows.Forms.Button sortBtn;
-        private System.Windows.Forms.TextBox tBoxOut;
-        private System.Windows.Forms.TextBox tBoxIn;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label factLbl;
-        private System.Windows.Forms.Label factLblRes;
         private System.Windows.Forms.Button factBtn;
-        private System.Windows.Forms.NumericUpDown factNumUd;
         private System.Windows.Forms.Button strBtn;
-        private System.Windows.Forms.TextBox strTboxRes;
-        private System.Windows.Forms.TextBox strTboxSource;
         private System.Windows.Forms.Button seqBtn;
-        private System.Windows.Forms.TextBox seqTboxRes;
-        private System.Windows.Forms.TextBox seqTboxSrc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-
-
+        internal System.Windows.Forms.TextBox tBoxOut;
+        internal System.Windows.Forms.TextBox tBoxIn;
+        internal System.Windows.Forms.NumericUpDown srcNumUd;
+        internal System.Windows.Forms.Label srcResLbl;
+        internal System.Windows.Forms.Label factLblRes;
+        internal System.Windows.Forms.NumericUpDown factNumUd;
+        internal System.Windows.Forms.TextBox strTboxRes;
+        internal System.Windows.Forms.TextBox strTboxSource;
+        internal System.Windows.Forms.TextBox seqTboxRes;
+        internal System.Windows.Forms.TextBox seqTboxSrc;
     }
 }
 

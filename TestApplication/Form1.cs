@@ -15,38 +15,37 @@ namespace TestApplication
         public Form1()
         {
             InitializeComponent();
+            new Presenter(this);
         }
+        public event EventHandler factBtnEv;
+        public event EventHandler strSrcBtnEv;
+        public event EventHandler srcBtnEv;
+        public event EventHandler srtBtnEv;
+        public event EventHandler seqBtnEv;
 
         private void sortBtn_Click(object sender, EventArgs e)
         {
-            tBoxOut.Text = Presenter.Sort(tBoxIn.Text);
+            srtBtnEv.Invoke(sender, e);           
         }
 
         private void srcBtn_Click(object sender, EventArgs e)
         {
-            srcResLbl.Text = Presenter.Search((int)srcNumUd.Value);
+            srcBtnEv.Invoke(sender, e);
         }
 
         private void factBtn_Click(object sender, EventArgs e)
         {
-            factLblRes.Text = Presenter.Fact((int)factNumUd.Value);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            strTboxRes.Text = Presenter.StrSrch(strTboxSource.Text);
-        }
+            factBtnEv.Invoke(sender, e);
+        }        
 
         private void seqBtn_Click(object sender, EventArgs e)
         {
-            if (Presenter.Seq(seqTboxSrc.Text))
-            {
-                seqTboxRes.Text = "Correct sequence";
-            }
-            else
-            {
-                seqTboxRes.Text = "Incorrect sequence";
-            }
+            seqBtnEv.Invoke(sender, e);
+        }
+
+        private void strBtn_Click(object sender, EventArgs e)
+        {
+            strSrcBtnEv.Invoke(sender, e);
         }
     }
 }

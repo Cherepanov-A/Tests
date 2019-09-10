@@ -8,61 +8,61 @@ namespace TestApplication
 {
     internal class Presenter
     {
-        private static int[] sArr { get; set; }
-        internal static string Sort(string arrTxt)
+        Model myModel;
+        Form1 mainForm;
+        public Presenter(Form1 f)
         {
-            
-            string[] temp = arrTxt.Split(' ');
-            if (temp.Length < 2)
-            {
-                return "This is not array";
-            }
-            int[] unsortArr = new int[temp.Length];
-            for (int i = 0; i < temp.Length; i++)
-            {
-                unsortArr[i] = Convert.ToInt32(temp[i]);
-            }
-            int[] sortArr = Sorter.IntSort(unsortArr);
-            sArr = sortArr;
-            StringBuilder result = new StringBuilder();
-            foreach (var item in sortArr)
-            {
-                result.Append(item.ToString() + " ");
-            }
-            return result.ToString();
+            mainForm = f;
+            myModel = new Model();
+            mainForm.factBtnEv += factHandler;
+            mainForm.srtBtnEv += srtHandler;
+            mainForm.srcBtnEv += srcHandler;
+            mainForm.strSrcBtnEv += strHandler;
+            mainForm.seqBtnEv += seqHandler;
         }
 
-        internal static string Search(int p)
+        void srtHandler(object sender, EventArgs e)
         {
-            int sw = Sorter.Search(sArr, p);
-            string result;
+            mainForm.tBoxOut.Text = myModel.IntSort(mainForm.tBoxIn.Text);
+        }
+
+        void srcHandler(object sender, EventArgs e)
+        {
+            int sw = myModel.Search((int)mainForm.srcNumUd.Value);
+
             switch (sw)
             {
-                case 1: result = "Item is listed";
+                case 1:
+                    mainForm.srcResLbl.Text = "Item is listed";
                     break;
-                case 0: result = "Array is empty";
+                case 0:
+                    mainForm.srcResLbl.Text = "Array is empty";
                     break;
-                case -1: result = "Item isn't listed";
+                case -1:
+                    mainForm.srcResLbl.Text = "Item isn't listed";
                     break;
-                default: result = "";
+                default:
+                    mainForm.srcResLbl.Text = "Stand by";
                     break;
             }
-            return result;
+
         }
 
-        internal static string Fact(int n)
-        {            
-            return Factorial.FactCount(n).ToString();           
-        }
-
-        internal static string StrSrch(string source)
+        void factHandler(object sender, EventArgs e)
         {
-            return StringSearch.StrSearch(source);           
+            mainForm.factLblRes.Text = Convert.ToString(myModel.FactCount((int)mainForm.factNumUd.Value));
         }
 
-        internal static bool Seq(string src)
+        void strHandler(object sender, EventArgs e)
         {
-            return Sequence.Check(src);
+            mainForm.strTboxRes.Text = myModel.StrSearch(mainForm.strTboxSource.Text);
         }
+
+        void seqHandler(object sender, EventArgs e)
+        {
+            mainForm.seqTboxRes.Text = myModel.Check(mainForm.seqTboxSrc.Text);
+        }
+
+
     }
 }
